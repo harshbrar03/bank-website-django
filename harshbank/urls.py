@@ -1,0 +1,32 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('index/',views.index , name = 'index'),
+    path('signup/',views.signup , name = 'signup'),
+    path('cust-storedetails/', views.cust_storedetails, name='cust_storedetails'),
+    path('login/',views.login,name = 'login'),
+    path('logincheck/', views.login_check_details, name='login_check_details'),
+    path('profile/',views.profile,name = 'profile'),
+    path('edit-profile/',views.editprofile,name = 'editprofile'),
+    path('update-editprofile/',views.update_editprofile,name = 'update_editprofile'),
+    path('transaction/',views.transaction,name = 'transaction'),
+    path('deposits/',views.deposits,name = 'deposits'),
+    path('savings/',views.savings,name = 'savings'),
+    path('fd/',views.fd,name = 'fd'),
+    path('fd_details/',views.fd_details,name = 'fd_details'),
+    path('showfd/',views.showfd,name = 'showfd'),
+    path('logout/',views.logout,name = 'logout'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('addaccounts/<int:user_id>/', views.addaccounts, name='addaccounts'),
+    path('listaccounts/', views.listaccounts, name='listaccounts'),
+    path('users/', views.users, name='users'),
+    path('storedetails/', views.storedetails, name='storedetails'),
+    path('withdraw/', views.withdraw, name='withdraw'),
+    path('myWithdraw/', views.myWithdraw, name='myWithdraw'),
+    path('deposit/', views.deposit, name='deposit'),
+    path('myDeposit/', views.myDeposit, name='myDeposit'),
+    path('logincheck/users/delete/<int:user_id>/', views.delete, name='delete'),
+    path('update/<int:user_id>/', views.update, name='update'),
+    path('update/<user_id>/myUpdate-store/', views.myUpdate_store, name='myUpdate_store'),
+]

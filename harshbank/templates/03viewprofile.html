@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        /* Add border and spacing to the table */
+        
+        table {
+            /* Makes the table take the full width of the container */
+            border-collapse: collapse;
+            /* Ensures borders are not doubled */
+            margin-bottom: 20px;
+            /* Adds space below the table */
+        }
+        /* Add border to table, cells, and headings */
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            /* Set the border style */
+        }
+        /* Style the table headers */
+        
+        th {
+            background-color: #f2f2f2;
+            /* Light gray background */
+            text-align: left;
+            /* Align text to the left */
+            padding: 10px;
+            /* Padding around the text */
+        }
+        /* Style the table cells */
+        
+        td {
+            padding: 10px;
+            /* Padding around the text */
+        }
+        /* Alternate row colors for readability */
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+            /* Light background for even rows */
+        }
+        /* Hover effect to highlight the row */
+        
+        tr:hover {
+            background-color: #e0e0e0;
+            /* Highlight the row on hover */
+        }
+    </style>
+<head>
+    <title>User Details</title>
+</head>
+<body>
+    <h1>User Details</h1>
+    <table>
+        <tr>
+            <td>User Name:</td>
+            <td>{{ user.username }}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{ user.emailid }}</td>
+        </tr>
+        <tr>
+            <td>Phone Number:</td>
+            <td>{{ user.phone_no }}</td>
+        </tr>
+        <tr>
+            <td>Account Number:</td>
+            <td>{{ user1.accountno }}</td>
+        </tr>
+        <tr>
+            <td>Balance:</td>
+            <td>&#8377; {{ user1.balance }}</td>
+        </tr>
+    </table>
+</body>
+</html>
